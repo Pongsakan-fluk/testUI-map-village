@@ -61,6 +61,24 @@ const groupC = [
   { id: 12, number: "12C", x: 680, y: 532 },
 ];
 
+const groupD = [
+  { id: 1, number: "1D", x: 280, y: 112 },
+  { id: 2, number: "2D", x: 265, y: 170 },
+  { id: 3, number: "3D", x: 259, y: 230 },
+  { id: 4, number: "4D", x: 285, y: 290 },
+  { id: 5, number: "5D", x: 325, y: 335 },
+  { id: 6, number: "6D", x: 370, y: 380 },
+  { id: 7, number: "7D", x: 420, y: 420 },
+  { id: 8, number: "8D", x: 465, y: 460 },
+];
+
+const groupH = [
+  { id: 1, number: "1H", x: 280, y: 112 },
+  { id: 2, number: "2H", x: 265, y: 170 },
+  { id: 3, number: "3H", x: 259, y: 230 },
+  { id: 4, number: "4H", x: 285, y: 290 },
+];
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -83,7 +101,7 @@ function App() {
               {/* zone A */}
               {groupA.map((house) => (
                 <div
-                  className={`bg-green-500 w-16 text-white rounded-xl py-1`}
+                  className={`bg-green-500 w-16 text-white rounded-xl py-1`} /* border-slate-100 */
                   key={house.id}
                   style={{
                     position: "absolute",
@@ -98,7 +116,7 @@ function App() {
               ))}
 
               {/* zone B */}
-              <div className="w-[320px] flex flex-wrap absolute top-[125px] left-[537px] -rotate-[38deg]">
+              <div className="w-[330px] bg-slate-100 p-2 overflow-hidden flex flex-wrap absolute top-[120px] left-[535px] -rotate-[38deg] rounded-tr-full">
                 {groupB.map((house) => (
                   <div
                     className={`bg-green-500 w-14 h-full text-white rounded-xl py-1`}
@@ -110,8 +128,56 @@ function App() {
               </div>
 
               {/* zone C */}
-              <div className="w-[360px] bg-slate-200 flex flex-wrap absolute top-[230px] left-[625px] -rotate-[38deg]">
+              <div className="w-[360px] bg-slate-100 p-2 flex flex-wrap absolute top-[225px] left-[625px] -rotate-[38deg] rounded-r-3xl">
                 {groupC.map((house) => (
+                  <div
+                    className={`bg-green-500 w-14 h-full text-white rounded-xl py-1`}
+                  >
+                    <FiHome size={28} className="mx-auto" />
+                    <p className="text-center">{house.number}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* zone D */}
+              <div className="w-[240px] bg-slate-100 p-1 flex flex-wrap absolute top-[305px] left-[827px] -rotate-[38deg] rounded-r-3xl">
+                {groupD.map((house) => (
+                  <div
+                    className={`bg-green-500 w-14 h-full text-white rounded-xl py-1`}
+                  >
+                    <FiHome size={28} className="mx-auto" />
+                    <p className="text-center">{house.number}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* zone F */}
+              <div className="w-[240px] bg-slate-100 p-1 flex flex-wrap absolute top-[410px] left-[927px] -rotate-[38deg] rounded-r-3xl">
+                {groupD.map((house) => (
+                  <div
+                    className={`bg-green-500 w-14 h-full text-white rounded-xl py-1`}
+                  >
+                    <FiHome size={28} className="mx-auto" />
+                    <p className="text-center">{house.number}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* zone G */}
+              <div className="w-[240px] bg-slate-100 p-1 flex flex-wrap absolute top-[530px] left-[1013px] -rotate-[38deg] rounded-r-3xl">
+                {groupD.map((house) => (
+                  <div
+                    className={`bg-green-500 w-14 h-full text-white rounded-xl py-1`}
+                  >
+                    <FiHome size={28} className="mx-auto" />
+                    <p className="text-center">{house.number}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* zone H */}
+              <div className="w-fit bg-slate-100 p-2 absolute top-[570px] left-[1292px] -rotate-[29deg] rounded-lg">
+                {groupH.map((house) => (
                   <div
                     className={`bg-green-500 w-14 h-full text-white rounded-xl py-1`}
                   >
